@@ -8,6 +8,9 @@ function drawSquares(num){
         //draw squares and increase counter
         const newSquare = document.createElement("div");
         newSquare.classList = "squares";
+        newSquare.addEventListener('mouseover', () => {
+            newSquare.style.backgroundColor = "green";
+        });
         squares.appendChild(newSquare);
         console.log("Drawing square!");
         i++;
@@ -16,3 +19,5 @@ function drawSquares(num){
 
 drawSquares(numSquares);
 console.log("Done drawing squares!");
+
+//for each div in squaresContainer, add mouse event listener
