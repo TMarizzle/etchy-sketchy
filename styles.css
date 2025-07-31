@@ -1,0 +1,12 @@
+.heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: blueviolet;
+}
+
+.squares {
+    background-color: aquamarine;
+    display: flex;
+    border: 5px solid red;
+    justify-content: space-between;
+    padding: 10px;
+}
