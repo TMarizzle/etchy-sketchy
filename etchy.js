@@ -1,5 +1,5 @@
 const squares = document.querySelector(".squaresContainer");
-//const newSquare = document.createElement("div");
+//set number of squares to draw, but needs to be Row x Col (4x4)
 const numSquares = 4;
 let i = 0;
 
@@ -8,6 +8,7 @@ function drawSquares(num){
         //draw squares and increase counter
         const newSquare = document.createElement("div");
         newSquare.classList = "squares";
+        //add mouseover for each div to change background color
         newSquare.addEventListener('mouseover', () => {
             newSquare.style.backgroundColor = "green";
         });
@@ -19,5 +20,3 @@ function drawSquares(num){
 
 drawSquares(numSquares);
 console.log("Done drawing squares!");
-
-//for each div in squaresContainer, add mouse event listener
