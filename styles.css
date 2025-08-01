@@ -3,7 +3,7 @@
     background-color: blueviolet;
 }
 
-.squares {
+#squares {
     background-color: aquamarine;
     display: flex;
     border: 1px solid red;

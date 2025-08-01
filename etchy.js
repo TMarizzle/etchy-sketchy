@@ -17,17 +17,21 @@ function drawSquares(num){
     //     i++;
     // }
     for (let i = 1; i <= num; i++){
-        let newSquare = "";
         let newRow = document.createElement("div");
         newRow.classList = `row${i}`;
         for (let j = 1; j <= num; j++){
-            newSquare = document.createElement("div");
-            newSquare.classList = "squares";
+            let newSquare = document.createElement("div");
+            newSquare.id = "squares";
+            newSquare.onmouseover = addColor;
             newRow.appendChild(newSquare);
         }
         squares.appendChild(newRow);
     }
 }
-
 drawSquares(numSquares);
 console.log("Done drawing squares!");
+
+function addColor(){
+    console.log("You touched my square!");
+    this.style.backgroundColor = "green";
+}
