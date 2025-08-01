@@ -1,7 +1,32 @@
 const squares = document.querySelector(".squaresContainer");
-//set number of squares to draw, but needs to be Row x Col (4x4)
-const numSquares = 8;
-let i = 1;
+const resetBtn = document.getElementById("reset").addEventListener('click', () =>{
+    location.reload();
+});
+const sixteenBtn = document.getElementById("sixteen").addEventListener('click', () => {
+    if (squares.children.length === 0){
+        drawSquares(16);
+    } else{
+        removeSquares();
+        drawSquares(16);
+    }
+});
+const eightBtn = document.getElementById("eight").addEventListener('click', () => {
+    //check if grid already exists; if it does, erase and then redraw a new one
+    if (squares.children.length === 0){
+        drawSquares(8);
+    } else{
+        removeSquares();
+        drawSquares(8);
+    }
+});
+const fortyBtn = document.getElementById("forty").addEventListener('click', () => {
+    if (squares.children.length === 0){
+        drawSquares(48);
+    } else{
+        removeSquares();
+        drawSquares(48);
+    }
+});
 
 function drawSquares(num){
     for (let i = 1; i <= num; i++){
@@ -16,10 +41,15 @@ function drawSquares(num){
         squares.appendChild(newRow);
     }
 }
-drawSquares(numSquares);
-console.log("Done drawing squares!");
+
+function removeSquares(){
+    while (squares.firstChild){
+            squares.removeChild(squares.firstChild);
+    }
+}
 
 function addColor(){
-    console.log("You touched my square!");
     this.style.backgroundColor = "green";
 }
+
+window.onload = drawSquares(8);
