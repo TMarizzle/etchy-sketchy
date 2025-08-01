@@ -13,4 +13,5 @@
 
 .squaresContainer {
     display: flex;
+    flex-wrap: wrap;
 }
