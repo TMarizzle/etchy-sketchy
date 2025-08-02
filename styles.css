@@ -18,9 +18,10 @@
 .squaresContainer {
     display: flex;
     margin: 20px;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
     border: 2px solid blue;
+    flex-direction: row;
 }
 
 .squaresContainer > div {
