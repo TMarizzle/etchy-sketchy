@@ -16,16 +16,24 @@ const fortyBtn = document.getElementById("forty").addEventListener('click', () =
 });
 
 function drawSquares(num){
-    for (let i = 1; i <= num; i++){
-        let newRow = document.createElement("div");
-        newRow.classList = `row${i}`;
-        for (let j = 1; j <= num; j++){
-            let newSquare = document.createElement("div");
-            newSquare.id = "squares";
-            newSquare.onmouseover = addColor;
-            newRow.appendChild(newSquare);
-        }
-        squares.appendChild(newRow);
+    // for (let i = 1; i <= num; i++){
+    //     let newRow = document.createElement("div");
+    //     newRow.classList = `row`;
+    //     for (let j = 1; j <= num; j++){
+    //         let newSquare = document.createElement("div");
+    //         newSquare.id = "square";
+    //         newSquare.onmouseover = addColor;
+    //         newRow.appendChild(newSquare);
+    //     }
+    //     squares.appendChild(newRow);
+    // }
+    for (let i = 0; i < (num * num); i++){
+        let square = document.createElement('div');
+        square.id = "square";
+        let squareHeight = 500 / num;
+        square.setAttribute("style", `height: ${squareHeight}px; width: ${squareHeight}px;`);
+        square.onmouseover = addColor;
+        squares.appendChild(square);
     }
 }
 
