@@ -7,6 +7,7 @@
 .heading {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-color: rgb(230, 53, 53);
+    padding: 20px;
 }
 
 #square {
@@ -17,8 +18,8 @@
 .squaresContainer {
     display: flex;
     margin: 20px;
-    width: 500px;
-    height: 500px;
+    width: 800px;
+    height: 800px;
     flex-wrap: wrap;
 }
 
@@ -28,10 +29,14 @@ button {
     background-color: gray;
     color: white;
     font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    flex: 1 1 0;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    justify-content: center;
+    width: 800px;
+    height: 80px;
+    margin: 20px;
 }
