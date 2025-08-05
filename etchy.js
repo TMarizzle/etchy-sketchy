@@ -24,7 +24,7 @@ function drawSquares(num){
     for (let i = 0; i < (num * num); i++){
         let square = document.createElement('div');
         square.id = "square";
-        let squareHeight = 800 / num;
+        let squareHeight = 600 / num;
         square.setAttribute("style", `height: ${squareHeight}px; width: ${squareHeight}px;`);
         square.onmouseover = addColor;
         squares.appendChild(square);
